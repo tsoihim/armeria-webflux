@@ -16,16 +16,6 @@ repositories {
     mavenCentral()
 }
 
-//dependencyManagement {
-//    imports {
-//        mavenBom 'io.micrometer:micrometer-bom:1.13.0'
-//        mavenBom 'io.netty:netty-bom:4.1.110.Final'
-//        mavenBom 'com.linecorp.armeria:armeria-bom:1.31.0'
-//        mavenBom 'org.junit:junit-bom:5.10.2'
-//        mavenBom 'io.github.resilience4j:resilience4j-bom:2.2.0'
-//    }
-//}
-
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
@@ -33,6 +23,13 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:${webfluxVersion}"
 
     implementation "org.springframework.boot:spring-boot-starter-webflux:${webfluxVersion}"
+    // Use r2dbc instead of JPA, since WebFlux is used (to avoid jdbc)
+    implementation "org.springframework.boot:spring-boot-starter-data-r2dbc:${webfluxVersion}"
+
+    implementation "org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0"
+
+    runtimeOnly 'io.r2dbc:r2dbc-h2'
+    runtimeOnly 'com.h2database:h2'
 
     testImplementation "org.springframework.boot:spring-boot-starter-test:${webfluxVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
