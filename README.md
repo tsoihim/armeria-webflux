@@ -29,3 +29,4 @@ All media types are application/json
 ## References
 - https://docs.spring.io/spring-framework/reference/web/webflux/new-framework.html
 - https://armeria.dev/docs/advanced/spring-webflux-integration/
+- https://github.com/line/armeria-examples/tree/main/spring-boot-webflux
