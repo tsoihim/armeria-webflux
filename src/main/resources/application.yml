@@ -14,3 +14,8 @@ server:
   port: 8443
   ssl:
     enabled: false
+
+armeria:
+  ports:
+    - port: ${server.port}
+      protocols: [ "http" ]
