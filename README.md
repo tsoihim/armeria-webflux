@@ -26,6 +26,10 @@ Check Swagger UI (http://[IP]:[PORT]/webjars/swagger-ui/index.html)
 All media types are application/json
 </br></br>
 
+## ETC
+Check Armeria Doc Service UI (http://[IP]:[PORT]/docs/#/)
+</br></br>
+
 ## References
 - https://docs.spring.io/spring-framework/reference/web/webflux/new-framework.html
 - https://armeria.dev/docs/advanced/spring-webflux-integration/
